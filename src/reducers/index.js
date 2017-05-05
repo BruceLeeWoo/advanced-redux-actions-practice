@@ -52,6 +52,9 @@ function videoURL(state ="", action){
   return state;
 }
 function currentUserSort(state ="", action){
+  if(action.type === "SET_CURRENT_USER_SORT"){
+    return action.value;
+  }
   return state;
 }
 function videoScale(state =0, action){

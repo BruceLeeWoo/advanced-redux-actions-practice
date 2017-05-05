@@ -1,4 +1,6 @@
 import React from 'react';
+import {setCurrentUserSort} from "../actions";
+import {connect} from "react-redux";
 
 function SortUsers(props) {
   return (
@@ -6,8 +8,8 @@ function SortUsers(props) {
         Sort Users On: 
         <select onChange={
           (e)=>{
-            if(props.setSearchText){
-              props.setSearchText(e.target.value);
+            if(props.set){
+              props.set(e.target.value);
             }
           }
         }>
@@ -17,4 +19,12 @@ function SortUsers(props) {
       </div>
   );
 }
-export default SortUsers;
+function mapDispatchToProps(dispatch){
+  return {
+    set:function(txt){
+      let action = setCurrentUserSort(txt);
+      dispatch(action);
+    }
+  }
+}
+export default connect(null,mapDispatchToProps)(SortUsers);

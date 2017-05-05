@@ -45,3 +45,9 @@ export function setVideoURL(url){
     value:url
   }
 }
+export function setCurrentUserSort(url){
+  return {
+    type:"SET_CURRENT_USER_SORT",
+    value:url
+  }
+}

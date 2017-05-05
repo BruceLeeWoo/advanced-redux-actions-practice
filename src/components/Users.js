@@ -25,7 +25,8 @@ function Users(props) {
 }
 function mapStateToProps(state){
   return {
-    users:state.users
+    users:state.users,
+    sortOn:state.currentUserSort
   };
 }
 export default connect(mapStateToProps)(Users);
