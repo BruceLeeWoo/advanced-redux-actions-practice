@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from "react-redux";
 
 function Users(props) {
   var usersDivs = null;
@@ -11,8 +12,8 @@ function Users(props) {
       (props.firstNameFilter && 
       u.first_name.indexOf(props.firstNameFilter) > -1);
     })
-    usersDivs = usersDivs.map(function(u){
-      return <div>{u.first_name} {u.last_name}</div>
+    usersDivs = usersDivs.map(function(u,i){
+      return <div key={i}>{u.first_name} {u.last_name}</div>
     })
   }
   return (
@@ -22,4 +23,9 @@ function Users(props) {
       </div>
   );
 }
-export default Users;
+function mapStateToProps(state){
+  return {
+    users:state.users
+  };
+}
+export default connect(mapStateToProps)(Users);

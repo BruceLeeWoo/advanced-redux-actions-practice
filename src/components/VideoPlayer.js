@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from "react-redux";
 
 function VideoPlayer(props) {
   let width = 200;
@@ -13,4 +14,10 @@ function VideoPlayer(props) {
       frameBorder="0" allowFullScreen></iframe></div>
   );
 }
-export default VideoPlayer;
+
+function mapStateToProps(state){
+  return {
+    URL:state.videoURL
+  }
+}
+export default connect(mapStateToProps)(VideoPlayer);

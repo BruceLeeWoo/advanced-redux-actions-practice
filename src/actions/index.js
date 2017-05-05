@@ -3,6 +3,11 @@ export function increaseCounter(){
     type:"INCREASE_COUNTER"
   }
 }
+export function decreaseCounter(){
+  return {
+    type:"DECREASE_COUNTER"
+  }
+}
 
 export function setSpecialText(txt){
   return {
@@ -20,5 +25,23 @@ export function addUser(user){
 export function removeUser(){
   return {
     type:"REMOVE_USER"
+  }
+}
+export function setCurrentCity(city){
+  return {
+    type:"SET_CURRENT_CITY",
+    value:city
+  }
+}
+export function setTemp(temp){
+  return {
+    type:"SET_TEMP",
+    value:temp
+  }
+}
+export function setVideoURL(url){
+  return {
+    type:"SET_VIDEO_URL",
+    value:url
   }
 }
