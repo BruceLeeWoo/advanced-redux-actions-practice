@@ -26,7 +26,8 @@ function Users(props) {
 function mapStateToProps(state){
   return {
     users:state.users,
-    sortOn:state.currentUserSort
+    sortOn:state.currentUserSort,
+    firstNameFilter: state.searchText
   };
 }
 export default connect(mapStateToProps)(Users);

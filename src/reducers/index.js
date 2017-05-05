@@ -40,9 +40,15 @@ function currentTemp(state =0, action){
   return state;
 }
 function isLoading(state =false, action){
+  if(action.type === "SET_IS_LOADING"){
+    return action.value;
+  }
   return state;
 }
 function searchText(state ="", action){
+  if(action.type === "SET_SEARCH_TEXT"){
+    return action.value;
+  }
   return state;
 }
 function videoURL(state ="", action){
@@ -58,6 +64,9 @@ function currentUserSort(state ="", action){
   return state;
 }
 function videoScale(state =0, action){
+  if(action.type === "SET_VIDEO_SCALE"){
+    return action.value;
+  }
   return state;
 }
 export default combineReducers(

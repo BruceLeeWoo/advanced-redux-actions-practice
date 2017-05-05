@@ -51,3 +51,21 @@ export function setCurrentUserSort(url){
     value:url
   }
 }
+export function setSearchText(txt){
+  return {
+    type:"SET_SEARCH_TEXT",
+    value:txt
+  }
+}
+export function setIsLoading(loading){
+  return {
+    type:"SET_IS_LOADING",
+    value:loading
+  }
+}
+export function setVideoScale(scale){
+  return {
+    type:"SET_VIDEO_SCALE",
+    value:scale
+  }
+}

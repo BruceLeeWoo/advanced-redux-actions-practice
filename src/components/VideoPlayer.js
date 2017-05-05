@@ -17,7 +17,8 @@ function VideoPlayer(props) {
 
 function mapStateToProps(state){
   return {
-    URL:state.videoURL
+    URL:state.videoURL,
+    scale:state.videoScale
   }
 }
 export default connect(mapStateToProps)(VideoPlayer);
